@@ -2,18 +2,21 @@
   <div>
     <headerComponent> </headerComponent>
     <contentComponent> </contentComponent>
+    <projectsView> </projectsView>
   </div>
 </template>
 
 <script>
 import headerComponent from '@/components/headerComponent'
 import contentComponent from '@/components/contentComponent'
+import projectsView from '@/components/projectsView'
 
 export default {
   name: 'App',
   components: {
     headerComponent,
-    contentComponent
+    contentComponent,
+    projectsView
   }
 }
 </script>

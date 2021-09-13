@@ -48,7 +48,7 @@
 }
 
 .header .links a:hover{
-  background-color: hsl(0, 0%, 60%);
+  background-color: hsl(0, 90%, 65%);
   color: white;
   border-radius: 5px;
 }

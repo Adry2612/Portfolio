@@ -47,5 +47,16 @@ footer .social a img{
   width: 25px;
   height: 25px;
 }
+
+@media screen and (max-width: 800px) {
+  footer{
+    padding: 2rem 4rem 2rem 4rem;
+  }
+
+  footer span{
+    margin: 0 4rem 0 0;
+  }
+
+}
 </style>
 

@@ -20,8 +20,8 @@ export default {
 
 <style scoped>
   .project {
-    width: 50rem;
-    height: 6rem;
+    width: 60%;
+    height: 10%;
     border-radius: 5px;
     background-color: #fff;
     border: 1px solid #EDF2F7;

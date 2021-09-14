@@ -24,17 +24,11 @@ export default {
     getData () {
       return fetch('https://api.github.com/users/Adry2612/repos')
         .then(response => response.json())
-    },
-
-    click (project) {
-      this.$emit(project)
     }
-
   },
   mounted () {
     this.getData().then(data => {
       this.repos = data
-      console.log(this.repos)
     })
 
 
@@ -44,11 +38,12 @@ export default {
 
 <style scoped>
 .projectsPage {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .projectsPage .title {
@@ -64,5 +59,23 @@ export default {
   background-color: #616161;
   opacity: 0.2;
   margin-right: 50rem;
+}
+
+.projectsPage .projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px){
+  .projectsPage .title {
+    font-size: 1.6rem;
+    margin: 4rem 25rem 0 0;
+  }
+
+  .projectsPage .decoration {
+    margin-right: 25rem;
+  }
 }
 </style>

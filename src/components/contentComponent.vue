@@ -118,4 +118,42 @@
 .content .description button svg {
   margin-left: 0.6rem;
 }
+
+@media screen and (max-width: 800px){
+.content{
+  flex-direction: column;
+}
+
+.content img{
+  width: 18rem;
+  height: 18rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.content .description{
+  font-size: 1.4rem;
+  text-size-adjust: auto;
+}
+
+.content .description #sayhi{
+  font-size: 1.6rem;
+}
+
+.content .description .decoration{
+  width: 65px;
+}
+}
+
+@media screen and (max-width: 600px){
+  .content img{
+    width: 12rem;
+    height: 12rem;
+    margin: 2rem 0 0 0;
+  }
+
+  .content .description{
+  font-size: 1rem;
+  text-size-adjust: auto;
+  }
+}
 </style>

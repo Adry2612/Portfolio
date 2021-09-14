@@ -4,9 +4,9 @@
       <img src="../assets/logo.png" alt="" />
     </div>
     <div class="links">
-      <a href=""> Enlace 1</a>
-      <a href=""> Enlace 2</a>
-      <a href=""> Enlace 3</a>
+      <a href=""> Sobre mi </a>
+      <a href=""> Carrera </a>
+      <a href=""> Tecnologías </a>
     </div>
   </div>
 </template>

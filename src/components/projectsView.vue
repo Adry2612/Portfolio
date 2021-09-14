@@ -4,7 +4,8 @@
     <span class="decoration"> </span>
 
     <div class="projects">
-      <projectComponent> </projectComponent>
+      <projectComponent v-for="(project, index) in repos" :key="index" :project="project">
+      </projectComponent>
     </div>
   </div>
 </template>
@@ -15,21 +16,28 @@ export default {
   name: 'projectsView',
   components: { projectComponent },
   data () {
-    return {
-      repos: []
+    return{
+      repos: null
     }
   },
   methods: {
-    async getData () {
+    getData () {
       return fetch('https://api.github.com/users/Adry2612/repos')
         .then(response => response.json())
+    },
+
+    click (project) {
+      this.$emit(project)
     }
+
   },
-  created () {
+  mounted () {
     this.getData().then(data => {
       this.repos = data
       console.log(this.repos)
     })
+
+
   }
 }
 </script>

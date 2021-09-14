@@ -3,6 +3,7 @@
     <headerComponent> </headerComponent>
     <contentComponent> </contentComponent>
     <projectsView> </projectsView>
+    <footerComponent> </footerComponent>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import headerComponent from '@/components/headerComponent'
 import contentComponent from '@/components/contentComponent'
 import projectsView from '@/components/projectsView'
+import footerComponent from '@/components/footerComponent'
 
 export default {
   name: 'App',
   components: {
     headerComponent,
     contentComponent,
-    projectsView
+    projectsView,
+    footerComponent
   }
 }
 </script>
@@ -27,6 +30,21 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 90%, 65%);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
 }
 
 #app {

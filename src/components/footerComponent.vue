@@ -58,5 +58,28 @@ footer .social a img{
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer span{
+      margin-left: 2.5rem;
+  }
+
+  footer .social{
+    justify-content: center;
+    margin-top: 0.6rem;
+  }
+  footer .social a img{
+    justify-content: center;
+    margin-top: 0.6rem;
+    width: 50px;
+  }
+
+}
 </style>
 

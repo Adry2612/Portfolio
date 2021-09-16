@@ -58,6 +58,7 @@
   height: 25rem;
   object-fit: cover;
   border-radius: 5px;
+  margin-left: 2rem;
 }
 
 .content .description {
@@ -65,9 +66,11 @@
   text-align: left;
   text-justify: left;
   font-size: 1.6rem;
+  text-size-adjust: auto;
   display: flex;
   flex-direction: column;
   color: #242424;
+  margin: 0 2rem 0 2rem;
 }
 
 .content .description #sayhi {
@@ -119,41 +122,97 @@
   margin-left: 0.6rem;
 }
 
+@media screen and (max-width: 1050px){
+  .content img{
+    width: 22rem;
+    height: 22rem;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 700px){
+  .content img{
+    width: 14rem;
+    height: 14rem;
+    margin-left: 2rem;
+  }
+
+  .content .description #sayhi {
+    font-size: 1.6rem;
+  }
+
+  .content .description .decoration {
+    width: 65px;
+  }
+
+  .content .description {
+    font-size: 1.2rem;
+  }
+
+  .content .description button {
+    font-size: 1rem;
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
 @media screen and (max-width: 800px){
-.content{
-  flex-direction: column;
+  .content{
+    flex-direction: column;
+  }
+
+  .content img{
+    width: 16rem;
+    height: 16rem;
+    margin: 18rem 0 2rem 0;
+  }
+
+  .content .description{
+    font-size: 1.6rem;
+    width: 70vw;
+    margin: 2rem;
+  }
+
+  .content .description #sayhi{
+    font-size: 1.8rem;
+  }
+
+  .content .description .decoration{
+    width: 65px;
+  }
 }
 
-.content img{
-  width: 18rem;
-  height: 18rem;
-  margin: 4rem 0 2rem 0;
-}
+@media screen and (max-width: 800px) and (max-height: 700px){
+  .content{
+      flex-direction: row;
+  }
 
-.content .description{
-  font-size: 1.4rem;
-  text-size-adjust: auto;
-}
+  .content img{
+    width: 16rem;
+    height: 16rem;
+    margin-left: 10rem;
+  }
 
-.content .description #sayhi{
-  font-size: 1.6rem;
-}
-
-.content .description .decoration{
-  width: 65px;
-}
 }
 
 @media screen and (max-width: 600px){
   .content img{
-    width: 12rem;
-    height: 12rem;
-    margin: 2rem 0 0 0;
+    width: 14rem;
+    height: 14rem;
+    margin-top: 2rem;
   }
 
   .content .description{
   font-size: 1rem;
   text-size-adjust: auto;
   }
+}
+
+@media screen and (max-height: 700){
+  .content img{
+      width: 14rem;
+      height: 14rem;
+      margin-top: 2rem;
+    }
 }
 </style>

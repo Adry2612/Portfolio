@@ -78,4 +78,15 @@ export default {
     margin-right: 25rem;
   }
 }
+
+@media screen and (max-width: 500px){
+  .projectsPage .title {
+    font-size: 1.6rem;
+    margin: 0 10rem 0 0;
+  }
+
+  .projectsPage .decoration {
+    margin-right: 10rem;
+  }
+}
 </style>

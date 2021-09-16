@@ -33,6 +33,7 @@ body{
   overflow-x: hidden;
 }
 
+
 body::-webkit-scrollbar {
     -webkit-appearance: none;
 }

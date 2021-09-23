@@ -1,5 +1,6 @@
 <template>
-  <div class="content">
+  <div>
+<div class="content">
     <img src="../assets/photo.jpg" alt="" />
 
     <div class="description">
@@ -39,8 +40,20 @@
       </button>
     </div>
   </div>
+
+  <projects-view> </projects-view>
+  </div>
 </template>
 
+<script>
+
+import projectsView from '@/components/projectsView'
+export default {
+  components: {
+    projectsView
+  }
+}
+</script>
 <style scoped>
 .content {
   width: 100vw;

@@ -30,8 +30,6 @@ export default {
     this.getData().then(data => {
       this.repos = data
     })
-
-
   }
 }
 </script>
@@ -66,6 +64,17 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1050px){
+  .projectsPage .title {
+    font-size: 1.6rem;
+    margin: 4rem 25rem 0 0;
+  }
+
+  .projectsPage .decoration {
+    margin-right: 25rem;
+  }
 }
 
 @media screen and (max-width: 800px){

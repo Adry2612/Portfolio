@@ -14,9 +14,9 @@
       <img src="../assets/logo.png" alt="" />
     </div>
     <div class="links">
-      <a href=""> Sobre mi </a>
-      <a href=""> Carrera </a>
-      <a href=""> Tecnologías </a>
+      <router-link to="/about-me"> Sobre mi </router-link>
+      <router-link to="/"> Carrera </router-link>
+      <router-link to="/tecnologies"> Tecnologías </router-link>
       <div class="close" @click="closeMenu()">
         <svg
           width="50"
@@ -82,6 +82,7 @@ export default {
 
 .header .logo {
   width: 10%;
+  grid-template: "logo";
 }
 
 .header .logo img {
@@ -114,7 +115,15 @@ export default {
 
 @media screen and (max-width: 1050px) and (max-height: 700px){
   .header {
-    height: 15vh;
+    height: 19vh;
+  }
+
+  .header .links {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 }
 
@@ -128,16 +137,18 @@ export default {
   .header .menu{
     display: block;
     fill: hsl(0, 90%, 65%);
+    grid-template: "menu" ;
   }
 
   .header .links {
     display: none;
     width: 100%;
-    height: 30%;
+    height: 20%;
     background-color: #fff;
     transition: transform 5s;
     transform: translateY(-100%);
     z-index: 1;
+
   }
 
   .header .links a{

@@ -14,7 +14,10 @@ export default {
   data(){
     return{}
   },
-  props: ["tecnology"]
+  props: ["tecnology"],
+  beforeMount (){
+
+  }
 }
 </script>
 
@@ -64,7 +67,9 @@ export default {
 
 @media screen and (max-width: 1050px){
   .tecnology{
-    width: 90%;
+    width: 100%;
+    justify-self: center;
+    align-items: center;
   }
 }
 </style>

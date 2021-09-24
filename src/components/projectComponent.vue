@@ -21,7 +21,7 @@ export default {
 <style scoped>
   .project {
     width: 60%;
-    height: 10%;
+    height: 50%;
     border-radius: 5px;
     background-color: #fff;
     border: 1px solid #EDF2F7;
@@ -31,6 +31,8 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     transition: 0.3s all ease;
+    align-self: center;
+    justify-self: center;
   }
 
   .project:hover{

@@ -1,5 +1,4 @@
 <template>
-  <div>
 <div class="content">
     <img src="../assets/photo.jpg" alt="" />
 
@@ -39,9 +38,6 @@
         </svg>
       </button>
     </div>
-  </div>
-
-  <projects-view> </projects-view>
   </div>
 </template>
 

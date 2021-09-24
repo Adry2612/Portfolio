@@ -15,7 +15,7 @@
     </div>
     <div class="links">
       <router-link to="/about-me"> Sobre mi </router-link>
-      <router-link to="/"> Carrera </router-link>
+      <router-link to="/projects"> Proyectos </router-link>
       <router-link to="/tecnologies"> Tecnologías </router-link>
       <div class="close" @click="closeMenu()">
         <svg

@@ -15,27 +15,34 @@
       <button id="learning" @click="selectCategory($event)"> <img src="../assets/icons/learning.svg"> Aprendiendo actualmente</button>
     </div>
 
-    <div class="allTecnologies">
+    <div class="allTecnologies" v-if="loaded==false">
+      <tecnologySkeleton v-for="i in 4" :key="i">
+      </tecnologySkeleton>
+    </div>
+
+    <div class="allTecnologies" v-else>
       <tecnologyComponent v-for="(tecnology, index) in tecnologies" :key="index" :tecnology="tecnology">
       </tecnologyComponent>
     </div>
-  </div>
+</div>
 
 </template>
 
 <script>
 import tecnologyComponent from '@/components/tecnologyComponent'
+import tecnologySkeleton from '@/components/tecnologySkeleton'
 export default {
-  components: { tecnologyComponent },
+  components: { tecnologyComponent, tecnologySkeleton },
 
   data() {
     return{
       tecnologies: [],
-      tec: null
+      loaded: false
     }
   },
   methods: {
     selectCategory(event) {
+      this.loaded = false
       let buttons = document.querySelectorAll('button');
       for (var i = 0; i<buttons.length; i++){
         if (buttons[i].classList.contains('selected')) {
@@ -67,14 +74,16 @@ export default {
           this.tecnologies.push(tecno)
           console.log(this.tecnologies)
         }
+
+        this.loaded = true
       })
     })
-      return selected
     }
   },
   mounted(){
     this.loadTecnologies().then(data => {
       this.tecnologies = data
+      this.loaded = true
     })
   }
 }
@@ -178,7 +187,40 @@ export default {
     width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 1rem 0 1rem;
   }
+
+  .tecnology{
+    background-color: #fff;
+    border: 1px solid #EDF2F7;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 5px;
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+  }
+
+  .tecnology img{
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.tecnology .info{
+  width: 100%;
+}
+
+.tecnology .info .title{
+  margin-bottom: 1rem;
+}
+
 
 @media screen and (max-width: 1050px){
   .container .presentation p{

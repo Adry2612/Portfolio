@@ -30,6 +30,7 @@ body{
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
 body::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -61,10 +62,10 @@ body::-webkit-scrollbar-thumb {
 
 .fade-leave-to{
   opacity: 0;
-  
+
 }
 
 .fade-leave-active{
   transition: all 0.5s ease-in;
 }
-</style>d
+</style>

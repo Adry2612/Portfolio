@@ -14,6 +14,7 @@
       <img src="../assets/logo.png" alt="" />
     </div>
     <div class="links">
+      <router-link to="/"> Principal </router-link>
       <router-link to="/about-me"> Sobre mi </router-link>
       <router-link to="/projects"> Proyectos </router-link>
       <router-link to="/tecnologies"> Tecnologías </router-link>
@@ -93,6 +94,7 @@ export default {
   width: 30%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header .links a {
@@ -143,12 +145,11 @@ export default {
   .header .links {
     display: none;
     width: 100%;
-    height: 20%;
+    height: 40%;
     background-color: #fff;
-    transition: transform 5s;
+    transition: all 5s ease;
     transform: translateY(-100%);
     z-index: 1;
-
   }
 
   .header .links a{
@@ -168,6 +169,7 @@ export default {
     0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
     0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
     0 100px 80px rgba(0, 0, 0, 0.07);
+    transition: transform 5s ease;
   }
 
   .header .close.active {

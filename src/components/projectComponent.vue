@@ -25,7 +25,7 @@ export default {
     border-radius: 5px;
     background-color: #fff;
     border: 1px solid #EDF2F7;
-    margin: 2rem;
+    margin: 2rem 0 2rem 0;
     padding: 1rem;
     display: flex;
     flex-direction: column;

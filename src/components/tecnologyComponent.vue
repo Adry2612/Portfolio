@@ -1,6 +1,6 @@
 <template>
   <div class="tecnology">
-    <img src="" alt="">
+    <img :src="'http://localhost:3700/api/get-image/' + tecnology.icon" alt="">
     <div class="info">
       <span class="title"> {{ tecnology.name }} </span>
       <span class="description"> {{ tecnology.description }} </span>
@@ -44,7 +44,6 @@ export default {
 }
 
 .tecnology img{
-  background-color: black;
   width: 50px;
   height: 50px;
 }

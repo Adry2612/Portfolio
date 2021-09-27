@@ -15,7 +15,7 @@
       <projectComponent v-for="(project, index) in repos" :key="index" :project="project" >
       </projectComponent>
     </div>
- 
+
   </div>
 </template>
 
@@ -97,12 +97,13 @@ export default {
 }
 
 .projectsPage .projects{
-  width: 90vw;
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 @media screen and (max-width: 1050px){

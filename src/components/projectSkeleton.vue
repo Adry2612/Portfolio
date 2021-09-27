@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="projects">
     <div class="card" v-for="i in 4" :key="i">
             <div class="img skeleton"></div>
             <div class="info">
@@ -18,6 +18,16 @@
 </template>
 
 <style scoped>
+
+.projects{
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.card{
+  align-self: center;
+  justify-self: center;
+}
 /* Skeleton Loading */
 .card .skeleton{
   animation: skeleton-loading 1s infinite alternate;

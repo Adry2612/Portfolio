@@ -42,23 +42,20 @@ export default {
       let menu = document.querySelector(".links");
       let close = document.querySelector(".close")
 
-      if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-      } else {
-        menu.classList.add("active");
-        close.classList.add("active");
-      }
+      document.addEventListener('click', (e) => {
+        if (e.target != menu) this.closeMenu()
+      })
+
+      menu.classList.toggle("active");
+      close.classList.toggle("active");
     },
+
     closeMenu() {
       let menu = document.querySelector(".links");
       let close = document.querySelector(".close")
 
-      if (close.classList.contains("active")) {
-        close.classList.remove("active");
-        menu.classList.remove("active");
-      } else {
-        close.classList.remove("active");
-      }
+      menu.classList.toggle("active");
+      close.classList.toggle("active");
     },
   }
 };
@@ -175,8 +172,8 @@ export default {
   .header .close.active {
     display: inline-block;
     position: fixed;
-    top: 2.4rem;
-    left: 6.2rem;
+    top: 1.8rem;
+    right: 3.2rem;
     fill: hsl(0, 90%, 65%);
   }
 }

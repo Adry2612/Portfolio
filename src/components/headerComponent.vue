@@ -14,10 +14,10 @@
       <img src="../assets/logo.png" alt="" />
     </div>
     <div class="links">
-      <router-link to="/"> Principal </router-link>
-      <router-link to="/about-me"> Sobre mi </router-link>
-      <router-link to="/projects"> Proyectos </router-link>
-      <router-link to="/tecnologies"> Tecnologías </router-link>
+      <router-link to="/" @click="closeMenu()"> Principal </router-link>
+      <router-link to="/about-me" @click="closeMenu()"> Sobre mi </router-link>
+      <router-link to="/projects" @click="closeMenu()"> Proyectos </router-link>
+      <router-link to="/tecnologies" @click="closeMenu()"> Tecnologías </router-link>
       <div class="close" @click="closeMenu()">
         <svg
           width="50"
@@ -42,24 +42,21 @@ export default {
       let menu = document.querySelector(".links");
       let close = document.querySelector(".close")
 
-      if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-      } else {
-        menu.classList.add("active");
-        close.classList.add("active");
-      }
+      document.addEventListener('click', (e) => {
+        if (e.target != menu) this.closeMenu()
+      })
+
+      menu.classList.toggle("active");
+      close.classList.toggle("active");
     },
+
     closeMenu() {
       let menu = document.querySelector(".links");
       let close = document.querySelector(".close")
 
-      if (close.classList.contains("active")) {
-        close.classList.remove("active");
-        menu.classList.remove("active");
-      } else {
-        close.classList.remove("active");
-      }
-    }
+      menu.classList.toggle("active");
+      close.classList.toggle("active");
+    },
   }
 };
 </script>
@@ -175,8 +172,8 @@ export default {
   .header .close.active {
     display: inline-block;
     position: fixed;
-    top: 2.4rem;
-    left: 6.2rem;
+    top: 1.8rem;
+    right: 3.2rem;
     fill: hsl(0, 90%, 65%);
   }
 }

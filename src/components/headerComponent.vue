@@ -14,10 +14,10 @@
       <img src="../assets/logo.png" alt="" />
     </div>
     <div class="links">
-      <router-link to="/"> Principal </router-link>
-      <router-link to="/about-me"> Sobre mi </router-link>
-      <router-link to="/projects"> Proyectos </router-link>
-      <router-link to="/tecnologies"> Tecnologías </router-link>
+      <router-link to="/" @click="closeMenu()"> Principal </router-link>
+      <router-link to="/about-me" @click="closeMenu()"> Sobre mi </router-link>
+      <router-link to="/projects" @click="closeMenu()"> Proyectos </router-link>
+      <router-link to="/tecnologies" @click="closeMenu()"> Tecnologías </router-link>
       <div class="close" @click="closeMenu()">
         <svg
           width="50"
@@ -59,7 +59,7 @@ export default {
       } else {
         close.classList.remove("active");
       }
-    }
+    },
   }
 };
 </script>

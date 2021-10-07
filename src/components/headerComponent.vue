@@ -183,7 +183,7 @@ export default {
       display: inline-block;
       position: fixed;
       top: 1.8rem;
-      left: 3rem;
+      right: 1rem;
       fill: hsl(0, 90%, 65%);
     }
 }

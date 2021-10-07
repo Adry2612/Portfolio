@@ -80,7 +80,7 @@ export default {
     },
 
     loadTecnologies(){
-      return fetch('https://adrian-vidal-portfolio-api.herokuapp.com/api/tecnologies')
+      return fetch('http://localhost:3700/api/tecnologies')
         .then(res => res.json())
     },
 
@@ -92,10 +92,13 @@ export default {
         data.forEach(tecno => {
           if(selected == 'all'){
             if(tecno.state == 'Learned') this.tecnologies.push(tecno)
+            console.log(this.tecnologies)
           } else if(selected == 'learning'){
             if(tecno.state == 'Learning') this.tecnologies.push(tecno)
+            console.log(this.tecnologies)
           } else if (selected == tecno.category){
             this.tecnologies.push(tecno)
+            console.log(this.tecnologies)
           }
           this.loaded = true
         })

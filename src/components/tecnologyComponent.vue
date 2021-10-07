@@ -1,6 +1,6 @@
 <template>
   <div class="tecnology">
-    <img :src="'https://adrian-vidal-portfolio-api.herokuapp.com/api/get-image/' + tecnology.icon" alt="">
+    <img :src="'http://localhost:3700/api/get-image/' + tecnology.icon" alt="">
     <div class="info">
       <span class="title"> {{ tecnology.name }} </span>
       <span class="description"> {{ tecnology.description }} </span>

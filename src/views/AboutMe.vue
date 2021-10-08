@@ -108,7 +108,7 @@
     width: 80%;
     color: hsl(216, 15%, 52%);
     font-size: 1.4rem;
-    line-height: 2.4rem;
+    line-height: 2.3rem;
   }
 
   /* Work and Education content. */

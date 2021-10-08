@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div class="tecnology" v-for="i in 10" :key="i">
-    <img src="" alt="" class="skeleton">
+  <div class="tecnology">
+    <div id="img" class="skeleton"> </div>
     <div class="info">
       <div class="title">
         <div class="skeleton skeleton-text"></div>
@@ -56,7 +56,7 @@
   transition: all 0.3s ease;
 }
 
-.tecnology img{
+.tecnology #img{
   width: 42px;
   height: 42px;
 }

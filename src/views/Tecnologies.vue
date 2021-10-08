@@ -39,7 +39,7 @@
     </div>
 
     <div class="allTecnologies" v-if="loaded==false">
-      <tecnologySkeleton v-for="i in 6" :key="i">
+      <tecnologySkeleton v-for="i in 4" :key="i">
       </tecnologySkeleton>
     </div>
 
@@ -86,7 +86,6 @@ export default {
 
     loadSelectCategory(){
       var selected = document.querySelector('.selected').getAttribute('id')
-      alert(selected)
       this.tecnologies = []
 
       this.loadTecnologies().then(data => {
@@ -95,7 +94,7 @@ export default {
             if(tecno.state == 'Learned') this.tecnologies.push(tecno)
           } else if(selected == 'learning'){
             if(tecno.state == 'Learning') this.tecnologies.push(tecno)
-          } else if (selected == tecno.category && tecno.state == 'Learned'){
+          } else if (selected == tecno.category){
             this.tecnologies.push(tecno)
           }
           this.loaded = true

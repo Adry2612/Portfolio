@@ -5,12 +5,16 @@
       <a href="https://github.com/Adry2612">
         <img src="../assets/social/iconmonstr-github-1.svg" alt="Github">
       </a>
-      <a href="https://linkedin.com/in/adrian-vidal-lopez-812b4b187">
+      <a href="www.linkedin.com/adrian-vidal-lopez-812b4b187">
         <img src="../assets/social/linkedin-original.svg" alt="Linkedin">
       </a>
 
       <a href="https://www.infojobs.net/candidate/my-infojobs.xhtml?dgv=1856105975303444127">
         <img src="../assets/social/ij-logo_reduced.svg" alt="Infojobs">
+      </a>
+
+      <a href="mailto:adrianvidal2612@gmail.com">
+        <img src="../assets/social/icons8-twitter.svg" alt="Twitter">
       </a>
 
       <a href="mailto:adrianvidal2612@gmail.com">

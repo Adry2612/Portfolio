@@ -86,7 +86,6 @@ export default {
 
     loadSelectCategory(){
       var selected = document.querySelector('.selected').getAttribute('id')
-      alert(selected)
       this.tecnologies = []
 
       this.loadTecnologies().then(data => {
